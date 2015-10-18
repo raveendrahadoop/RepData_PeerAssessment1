@@ -25,25 +25,25 @@ ipak(packages)
 #source("http://bioconductor.org/biocLite.R")
 #biocLite("EBImage")
 
-direccion <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
-datos <- "datos"
-if(!file.exists(datos)){
-  dir.create(datos)
+directory <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+data <- "data"
+if(!file.exists(data)){
+  dir.create(data)
 } 
-graficos <- "graficos" 
-if(!file.exists(graficos)){
-  dir.create(graficos)
+graphics <- "graphics" 
+if(!file.exists(graphics)){
+  dir.create(graphics)
 }
 zip <- paste(getwd(), "/activity.zip", sep = "")
 if(!file.exists(zip)){
-	download.file(direccion, zip, method="curl", mode="wb")
+	download.file(directory, zip, method="curl", mode="wb")
 }
-archivo <- paste(getwd(), "/datos/activity.csv", sep = "")
+archive <- paste(getwd(), "/data/activity.csv", sep = "")
 if(!file.exists(archivo)){
-	unzip(zip, list = FALSE, overwrite = FALSE, exdir = datos)
+	unzip(zip, list = FALSE, overwrite = FALSE, exdir = data)
 }
 
-activity <- read.table(file = archivo, header = TRUE, sep = ",")
+activity <- read.table(file = archive, header = TRUE, sep = ",")
 ```
 
 ## What is mean total number of steps taken per day?
