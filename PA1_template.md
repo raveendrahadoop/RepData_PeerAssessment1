@@ -1,9 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+﻿# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
 
-Show any code that is needed to 
+Show any code that is needed to : 
 
 1. Load the data (i.e. read.csv())
 
